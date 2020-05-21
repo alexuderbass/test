@@ -4,28 +4,32 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 
-			document.querySelector('#submit').disabled = true;
-
-			document.querySelector('#task').onkeyup = () => {
-				document.querySelector('#submit').disabled = false;
-			};
-
 			document.querySelector('#new-task').onsubmit = () => {
 
+				// ===============================================
 				const li = document.createElement('li');
 				li.innerHTML = document.querySelector('#task').value;
 
-				document.querySelector('#tasks').append(li);
+				// ===============================================
+				document.querySelector('#task').append(li);
 
-				document.querySelector('#task').value ='';
-				document.querySelector('#submit').disabled = true;
+				// ===============================================
+				document.querySelector('#task').value = '';
 
+				// ===============================================
 				return false;
-			};	
-		})
+			};
+		});
 	</script>
+	<tittle>Tasks</tittle>
 </head>
 <body>
-
+	<h1>Tasks</h1>
+	<ul id="task">
+	</ul>
+<form id="new-task">
+	<input id="task" autocomplete="off" autofocus placeholder="New-Task" type="text">
+	<input type="submit">
+</form>	
 </body>
 </html>
