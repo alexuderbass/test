@@ -11,7 +11,7 @@
 				li.innerHTML = document.querySelector('#task').value;
 
 				// ===============================================
-				document.querySelector('#task').append(li);
+				document.querySelector('#tasks').append(li);
 
 				// ===============================================
 				document.querySelector('#task').value = '';
@@ -25,7 +25,7 @@
 </head>
 <body>
 	<h1>Tasks</h1>
-	<ul id="task">
+	<ul id="tasks">
 	</ul>
 	<form id="new-task">
 		<input id="task" autocomplete="off" autofocus placeholder="New-Task" type="text">
